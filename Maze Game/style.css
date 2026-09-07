@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+#maze {
+    width: 100%;
+    aspect-ratio: 31 / 17;
+    display: grid;
+    grid-template-columns: repeat(31, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+    border: 3px solid white;
+    background: black;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+.wall {
+    background: white;
+}
+
+.player {
+    background: black;
+}
+
+.goal {
+    background: black;
+}
+
+.controls {
+    margin-top: 25px;
+}
+
+.controls button,
+.restart {
+    background: #222;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 10px 20px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.controls button:hover,
+.restart:hover {
+    background: white;
+    color: black;
+}
+
+.restart {
+    margin-top: 15px;
+    font-size: 18px;
+}
